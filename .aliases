@@ -1,0 +1,23 @@
+# Aliases
+# https://github.com/mdo/config/blob/master/.bash_profile
+# https://github.com/ajmalsiddiqui/dotfiles/blob/master/.aliases
+
+## Shortcuts
+alias ls='ls -al'
+alias editgit='code ~/.gitconfig'
+alias editbash='code ~/.bash_profile'
+## to restart your terminal after changing .bash_profile
+alias resource='source ~/.bash_profile && echo "Done!"'
+
+## Git specific aliases
+# Note: these aliases have been moved to .gitconfig
+alias g='git'
+
+## NPM
+alias nr='npm run'
+alias ni='npm install'
+alias nid='npm install -D'
+
+## Server quick starts
+alias js='bundle exec jekyll serve --watch'
+alias ps='python -m SimpleHTTPServer 4000'
