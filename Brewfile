@@ -69,3 +69,4 @@ cask 'the-unarchiver'
 cask 'things'
 cask 'transmission'
 cask 'vlc'
+
