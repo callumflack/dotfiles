@@ -96,7 +96,7 @@ module.exports = {
   // 'hyperclean'
   // 'hyperterminator',
   // 'hypercolors'
-  plugins: ["hyperlinks", "hyper-spacegray-eighties"],
+  plugins: ["hypercwd", "hyperlinks", "hyper-search", "hyper-spacegray-eighties"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here

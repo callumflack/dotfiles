@@ -1,0 +1,47 @@
+## https://github.com/mdo/config/blob/master/.gitconfig
+## https://github.com/ajmalsiddiqui/dotfiles/blob/master/.gitconfig
+
+[user]
+	name = Callum Flack
+	email = callumflack@gmail.com
+
+[alias]
+  br = branch
+  co = checkout
+  cp = cherry-pick
+  ci = commit
+  st = status
+
+	# alias add='git add .'
+	# alias log='git log'
+	# alias diff='git diff'
+	# alias branch='git branch'
+	# alias st='git status'
+	# alias stash='git stash'
+	# alias fetch='git fetch'
+	# alias push='git push origin head'
+	# alias pull='git pull'
+	# alias pullr='git pull --rebase'
+	# alias fp='fetch && pull'
+	# alias gmm='git merge master'
+
+[color]
+		ui = auto
+	[color "branch"]
+		current = yellow reverse
+		local = yellow
+		remote = green
+	[color "diff"]
+		meta = yellow
+		frag = magenta
+		old = red
+		new = green
+	[color "status"]
+		added = yellow
+		changed = green
+		untracked = cyan
+  
+[core]
+	editor = code --wait # use vs code
+	excludesfile = /Users/sticktoitiveness/.gitignore_global
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
