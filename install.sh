@@ -4,6 +4,7 @@
 dir=~/REPOS/dotfiles
 files="
   .bash_profile
+  .gitconfig
   .gitignore
   .editorconfig
   .hyper.js
