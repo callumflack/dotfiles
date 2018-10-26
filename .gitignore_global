@@ -7,6 +7,7 @@ _out
 
 # Numerous always-ignore extensions
 *.diff
+*.env
 *.err
 *.exe
 *.gz
