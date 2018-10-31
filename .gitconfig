@@ -45,6 +45,7 @@
 	editor = code --wait # use vs code
 	excludesfile = /Users/sticktoitiveness/.gitignore_global
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
