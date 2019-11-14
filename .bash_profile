@@ -33,6 +33,7 @@ export PATH=/opt/local/bin:/opt/local/sbin:${PATH}
 
 # Homebrew
 export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
 # Java
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_141.jdk/Contents/Home"
@@ -47,14 +48,15 @@ export PATH="$HOME/.npm-packages/bin:$PATH"
 ## This seems to latch onto .npmrc settings, if you have it.
 ## export PATH="$PATH:/opt/yarn-[version]/bin"
 ## export PATH="$PATH:`yarn global bin`"
-export PATH="$HOME/.yarn/bin:$PATH"
+# export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$(yarn global bin):$PATH"
 
 # VS Code
 ## export EDITOR="code -w" ?
 export EDITOR="Visual Studio Code"
 
 # Ruby
-# Add RVM to PATH for scripting. 
+# Add RVM to PATH for scripting.
 # Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 ## Load RVM into a shell session *as a function*

@@ -2,7 +2,15 @@
 
 `bash install.sh`
 
-# Adding files
+## Symlinking
+
+To create a symlink from here to the directory where they are expected (usually your home directory, ~):
+
+```
+ln -sv “~/REPOS/dotfiles/.gitconfig” ~
+```
+
+## Adding files
 
 Open `install.sh` and append to the `files` list.
 
