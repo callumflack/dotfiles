@@ -1,16 +1,31 @@
 # Install
 
-Add Homebrew first:
-
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 Clone:
 
-`$ git clone https://github.com/jokeyrhyme/dotfiles.git ~/.dotfiles`
+```
+$ git clone https://github.com/jokeyrhyme/dotfiles.git ~/.dotfiles
+```
 
 Run the install:
 
-`$ ~/REPOS/dotfiles/install.sh`
+```
+$ ~/REPOS/dotfiles/install.sh
+```
+
+Add Homebrew:
+
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Run the brewfile:
+
+```
+j dotfiles
+
+brew bundle
+```
 
 ## Symlinking
 
