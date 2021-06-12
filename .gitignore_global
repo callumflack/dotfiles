@@ -1,42 +1,24 @@
-# Ignore docs files
+# Project files & dirs
 _gh_pages
 _site
 _dist
 _out
-.ruby-version
-
-# Numerous always-ignore extensions
-*.diff
 *.env
-*.err
-*.exe
-*.gz
-*.log
-*.map
-*.orig
-*.rej
-*.sql
-*.sqlite
-*.swo
-*.swp
-*.vi
-*.zip
-*~
+*.ruby-version
+node_modules
 
 # OS or Editor folders
 ._*
-.cache
 .DS_Store
-.idea
-.php_cs.cache
-.project
-.settings
-.tmproj
-*.esproj
-*.sublime-project
-*.sublime-workspace
-nbproject
 Thumbs.db
 
-# Folders to ignore
-node_modules
+# Always-ignore extensions
+*~
+*.exe
+*.zip
+*.gz
+*.sql
+*.sqlite
+*.map
+*.sass-cache
+*.php_cs.cache

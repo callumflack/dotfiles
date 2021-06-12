@@ -1,5 +1,6 @@
 ## https://github.com/mdo/config/blob/master/.gitconfig
 ## https://github.com/ajmalsiddiqui/dotfiles/blob/master/.gitconfig
+## https://github.com/necolas/dotfiles/blob/master/git/gitconfig
 
 [user]
 	name = Callum Flack
@@ -25,8 +26,27 @@
   # alias fp='fetch && pull'
   # alias gmm='git merge master'
 
+  # https://git.wiki.kernel.org/articles/a/l/i/Aliases.html
+
+  # `git remote prune origin`: remove remote-tracking branches that were deleted from the remote repo
+  # `git gc`: cleanup unnecessary files and optimize the local repository
+  # `git clean -df`: remove untracked files and directories from the working tree
+  # `git stash clear`: remove all stashed states
+  trim = !git remote prune origin && git gc
+  cleanup = !git clean -df && git stash clear
+
+  # Add untracked, remove deleted, and show status
+  adda = !git add -A && git status
+
+  # Diff what is staged for the next commit
+  diffc = diff --cached
+  # Diff overview
+  diffst = diff --stat
+
+# color opts: normal, black, red, green, yellow, blue, magenta, cyan, or white
 [color]
     ui = auto
+    interactive = auto
   [color "branch"]
     current = yellow reverse
     local = yellow
@@ -42,20 +62,21 @@
     untracked = cyan
 
 [core]
-  editor = code --wait # use vs code
-	excludesfile = /Users/sticktoitiveness/.gitignore_global
+  # use vs code
+  editor = code --wait
   whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	# Use custom `.gitignore` and `.gitattributes`
+  excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
+
+[credential]
+	helper = osxkeychain
 
 [filter "lfs"]
   required = true
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+
 [commit]
-	template = /Users/sticktoitiveness/.stCommitMsg
+	template = ~/.stCommitMsg

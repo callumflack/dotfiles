@@ -1,9 +1,12 @@
 #!/bin/bash
 
+## See also:
+## https://github.com/necolas/dotfiles/blob/master/bin/dotfiles
+
 # Variables
 dir=~/REPOS/dotfiles
 files="
-  .bash_profile
+  .zshrc
   .gitconfig
   .gitignore_global
   .editorconfig
@@ -21,3 +24,5 @@ for file in $files; do
   ln -fs $dir/$file ~/$file
   echo "...Done"
 done
+
+# Verify: $ ls -la | grep .-\>

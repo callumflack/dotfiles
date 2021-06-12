@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+# use $HOME? $ export ZSH=$HOME/.oh-my-zsh
 export ZSH="/Users/sticktoitiveness/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
@@ -69,8 +70,10 @@ ZSH_THEME="robbyrussell"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
+# plugins=(git npm k zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+# source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # ------------------------------------
 # User configuration
@@ -126,10 +129,9 @@ export PATH="$HOME/.npm-packages/bin:$PATH"
 ## export PATH="$HOME/.yarn/bin:$PATH"
 export PATH="$(yarn global bin):$PATH"
 
-# NVM
-##
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+# NVM (DEPRECATED) — Now using N
+# export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # Ruby
 # Add RVM to PATH for scripting.
@@ -147,6 +149,11 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
+
+# Possible TODOs
+# Set alisases externally, eg:
+# source ~/.dotfiles/exports
+# source ~/.dotfiles/aliases
 
 # ------------------------------------
 
