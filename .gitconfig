@@ -4,7 +4,35 @@
 
 [user]
 	name = Callum Flack
-	email = callumflack@gmail.com
+	email = callum@callumflack.design
+
+# NB. When in terminal, you can replace "git config" with "git config --global" to set a default preference for all repositories, which are stored here.
+
+[core]
+  # use vs code
+  editor = code --wait
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	# Use custom `.gitignore` and `.gitattributes`
+  excludesfile = ~/.gitignore
+  attributesfile = ~/.gitattributes
+
+[credential]
+	helper = osxkeychain
+
+# Default pull config
+# Pulling without specifying how to reconcile divergent branches is discouraged
+# You can also pass --rebase, --no-rebase, or --ff-only on the command line
+# to override the configured default per invocation.
+# https://spin.atomicobject.com/2020/05/05/git-configurations-default/
+# - git config pull.rebase false  # merge (the default strategy)
+# - git config pull.rebase true   # rebase (better!)
+# - git config pull.ff only       # fast-forward only
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[diff]
+	colorMoved = zebra
 
 [alias]
   br = branch
@@ -43,6 +71,15 @@
   # Diff overview
   diffst = diff --stat
 
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+
+[commit]
+	template = ~/.stCommitMsg
+
 # color opts: normal, black, red, green, yellow, blue, magenta, cyan, or white
 [color]
     ui = auto
@@ -60,23 +97,3 @@
     added = yellow
     changed = green
     untracked = cyan
-
-[core]
-  # use vs code
-  editor = code --wait
-  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	# Use custom `.gitignore` and `.gitattributes`
-  excludesfile = ~/.gitignore
-  attributesfile = ~/.gitattributes
-
-[credential]
-	helper = osxkeychain
-
-[filter "lfs"]
-  required = true
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
-  process = git-lfs filter-process
-
-[commit]
-	template = ~/.stCommitMsg
