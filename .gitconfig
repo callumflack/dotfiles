@@ -27,6 +27,10 @@
 # - git config pull.rebase false  # merge (the default strategy)
 # - git config pull.rebase true   # rebase (better!)
 # - git config pull.ff only       # fast-forward only
+
+# I never leave home without: rebase.autostash and rebase.autoSquash
+# “git config –global push.default simple” to push only the current branch
+
 [pull]
 	rebase = true
 [fetch]
@@ -34,6 +38,7 @@
 [diff]
 	colorMoved = zebra
 
+# Aliases
 [alias]
   br = branch
   co = checkout
