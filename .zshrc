@@ -160,11 +160,11 @@ export PATH="$(yarn global bin):$PATH"
 
 # Shortcuts
 alias ls='ls -al'
-alias editgit='code ~/.gitconfig'
+alias gitc='code ~/.gitconfig'
 ## to restart your terminal after changing .bash_profile
 # alias editbash='code ~/.bash_profile'
 # alias resource='source ~/.bash_profile && echo "Done!"'
-alias zshconfig="code ~/.zshrc"
+alias zc="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 
 # Git specific aliases
@@ -199,6 +199,7 @@ alias ni='pnpm install'
 alias nid='pnpm install -D'
 alias nu='pnpm uninstall'
 alias nre='pnpm remove'
+alias nup='pnpm update'
 
 # Yarn
 alias y='yarn'
